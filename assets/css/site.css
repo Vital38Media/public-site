@@ -63,7 +63,7 @@ p.mainText {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -70%);
+    transform: translate(-50%, -60%);
     width: 100%;
     user-drag: none;
     user-select: none;
@@ -75,6 +75,10 @@ p.mainText {
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
     "Arial Narrow", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-size: 16pt;
+}
+
+span.mainTextJustified {
+    text-align: justify;
 }
 
 p.mainText em {
