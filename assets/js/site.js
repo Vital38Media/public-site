@@ -26,6 +26,7 @@ $(function(){
 });
 
 $(window).on("load", function(){
+    mixpanel.track("Page View");
     $('.secondarylogo').hide();
     $('.mainText').hide();
 })
