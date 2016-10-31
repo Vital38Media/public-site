@@ -2,7 +2,7 @@
 $(function(){
     $(".textLine").typed({
       strings: ["<strong>38%</strong> of consumers <em>stop</em> engaging online <br> if the content is unattractive",
-        "^500Web Design | Graphic Design | Cinematography | Photography^500<br>Coming soon"],
+        "^500Web Design | Graphic Design | Cinematography | Photography^500<br>Don't lose the vital 38%"],
       contentType: 'html',
       typeSpeed: 0,
       startDelay: 1500,
