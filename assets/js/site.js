@@ -39,7 +39,7 @@ function returnHome() {
     }, 1000)
 }
 $(document).ready(function () {
-    // mixpanel.track("Page View");
+    mixpanel.track("Page View");
     $('.secondarylogo').hide();
     $('.mainText').hide();
     $('.portfoliotext').hide();
