@@ -63,7 +63,26 @@ p.mainText {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -60%);
+    transform: translate(-50%, -50%);
+    width: 100%;
+    user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    text-align: center;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
+    "Arial Narrow", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-size: 16pt;
+}
+
+div.portfoliotext {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 100%;
     user-drag: none;
     user-select: none;
@@ -85,9 +104,24 @@ p.mainText em {
     font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
+p.navbread {
+    font-size: 14pt;
+
+}
+
 a {
     color: grey;
     text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+div.row {
+    padding-top: 30px;
+    margin-right: 0px;
+    margin-left: 0px;
 }
 /*
 .typed-cursor{

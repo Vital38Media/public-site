@@ -25,8 +25,25 @@ $(function(){
     });
 });
 
-$(window).on("load", function(){
-    mixpanel.track("Page View");
+function showPortfolio() {
+     $('.mainText').fadeOut(1000);
+     setTimeout(function () {
+         $('.portfoliotext').fadeIn(1000);
+     }, 1000)
+}
+
+function returnHome() {
+    $('.portfoliotext').fadeOut(1000);
+    setTimeout(function () {
+        $('.mainText').fadeIn(1000);
+    }, 1000)
+}
+$(document).ready(function () {
+    // mixpanel.track("Page View");
     $('.secondarylogo').hide();
     $('.mainText').hide();
+    $('.portfoliotext').hide();
+})
+$(window).on("load", function(){
+
 })
