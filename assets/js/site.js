@@ -18,6 +18,11 @@ $(function(){
           setTimeout(function () {
               $('.mainContainer').fadeOut(1000);
               setTimeout(function () {
+                  mixpanel.track("Content Loaded", {
+                      "isRetina": window.devicePixelRatio > 1,
+                      "name": "home",
+                      "internal": false
+                  });
                   $('.mainText').fadeIn(1000);
               }, 1000)
           }, 2000)
@@ -27,6 +32,11 @@ $(function(){
 
 function showPortfolio() {
      $('.mainText').fadeOut(1000);
+     mixpanel.track("Page View", {
+         "isRetina": window.devicePixelRatio > 1,
+         "name": "portfolio",
+         "internal": true
+     });
      setTimeout(function () {
          $('.portfoliotext').fadeIn(1000);
      }, 1000)
@@ -34,12 +44,21 @@ function showPortfolio() {
 
 function returnHome() {
     $('.portfoliotext').fadeOut(1000);
+    mixpanel.track("Page View", {
+        "isRetina": window.devicePixelRatio > 1,
+        "name": "home",
+        "internal": true
+    });
     setTimeout(function () {
         $('.mainText').fadeIn(1000);
     }, 1000)
 }
 $(document).ready(function () {
-    mixpanel.track("Page View");
+    mixpanel.track("Page View", {
+        "isRetina": window.devicePixelRatio > 1,
+        "name": "home",
+        "internal": false
+    });
     $('.secondarylogo').hide();
     $('.mainText').hide();
     $('.portfoliotext').hide();
