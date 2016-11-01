@@ -78,7 +78,7 @@ p.mainText {
 }
 
 div.portfoliotext {
-    display: block;
+    /*display: block;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -89,7 +89,7 @@ div.portfoliotext {
     -moz-user-select: none;
     -webkit-user-drag: none;
     -webkit-user-select: none;
-    -ms-user-select: none;
+    -ms-user-select: none;*/
     text-align: center;
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
     "Arial Narrow", Helvetica, Arial, "Lucida Grande", sans-serif;
