@@ -3,7 +3,7 @@ body {
     background: url(site_bg.png) no-repeat;
     background-position: top;
     background-color: #f4f4f4;
-    background-size: cover;
+    background-size: fill;
 }
 
 #cover {
@@ -97,6 +97,8 @@ div.portfoliotext {
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
     "Arial Narrow", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-size: 16pt;
+    padding-top: 40px;
+    padding-bottom: 20px;
 }
 
 div.mainarea {
@@ -131,9 +133,11 @@ a:hover {
 }
 
 div.row {
-    padding-top: 30px;
     margin-right: 0px;
     margin-left: 0px;
+}
+div.row p {
+    padding-top: 40px;
 }
 /*
 .typed-cursor{
