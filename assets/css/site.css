@@ -1,9 +1,16 @@
 /* auto generated CSS file, automatically added to index.html */
+
 body {
-    background: url(site_bg.png) no-repeat;
-    background-position: top;
     background-color: #f4f4f4;
-    background-size: fill;
+}
+
+@media only screen and (min-width: 768px) {
+    body {
+        background: url(site_bg.png) no-repeat;
+        background-position: top;
+        background-color: #f4f4f4;
+        background-size: fill;
+    }
 }
 
 #cover {
