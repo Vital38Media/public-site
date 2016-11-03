@@ -4,15 +4,6 @@ body {
     background-color: #f4f4f4;
 }
 
-@media only screen and (min-width: 768px) {
-    body {
-        background: url(site_bg.png) no-repeat;
-        background-position: top;
-        background-color: #f4f4f4;
-        background-size: fill;
-    }
-}
-
 #cover {
 	background-color: #ebebe8;
 	position:fixed;
@@ -29,36 +20,21 @@ p.creditText {
     right: -45px;
     transform: rotate(90deg);
     color: grey;
-    opacity: 0.6;
+    opacity: 0;
 }
 img.mainlogo {
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -75%);
-    width: 200px;
-    user-drag: none;
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-drag: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
+    width: 100px;
+    margin-top: 10%;
+    margin-left: 35%;
+    margin-right: 50%;
 }
 
 img.secondarylogo {
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, 500%);
-    width: 200px;
-    user-drag: none;
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-drag: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
+
+    width: 100px;
+    margin-left: 35%;
+    margin-right: 50%;
+
 }
 
 img.smallheader {
@@ -74,19 +50,9 @@ div.textLine {
     text-align: center;
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
     "Arial Narrow", Helvetica, Arial, "Lucida Grande", sans-serif;
-    font-size: 16pt;
-    display: block;
-    position: absolute;
+    font-size: 14pt;
     height: 200px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, 35%);
-    user-drag: none;
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-drag: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
+
 }
 
 p.mainText {
@@ -146,25 +112,65 @@ div.row {
 div.row p {
     padding-top: 40px;
 }
-/*
-.typed-cursor{
-    opacity: 1;
-    -webkit-animation: blink 0.7s infinite;
-    -moz-animation: blink 0.7s infinite;
-    animation: blink 0.7s infinite;
+@media only screen and (min-width: 768px) {
+    body {
+        background: url(site_bg.png) no-repeat;
+        background-position: top;
+        background-color: #f4f4f4;
+        background-size: fill;
+    }
+
+    img.smallheader {
+        user-drag: none;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-drag: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+    }
+    div.textLine {
+        width: 100%;
+        text-align: center;
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
+        "Arial Narrow", Helvetica, Arial, "Lucida Grande", sans-serif;
+        font-size: 16pt;
+        display: block;
+        position: absolute;
+        height: 200px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 35%);
+        user-drag: none;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-drag: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+    }
+
+    img.mainlogo {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -75%);
+        width: 200px;
+        user-drag: none;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-drag: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+    }
+
+    p.creditText {
+        position: absolute;
+        bottom: 70px;
+        right: -45px;
+        transform: rotate(90deg);
+        color: grey;
+        opacity: 0.6;
+        visibility: visible;
+    }
+
 }
-@keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
-}
-@-webkit-keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
-}
-@-moz-keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
-}*/
