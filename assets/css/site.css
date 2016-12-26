@@ -60,11 +60,12 @@ p.mainText {
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
     "Arial Narrow", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-size: 12pt;
+    margin: 0 auto;
     padding-top: 40px;
     padding-bottom: 40px;
     padding-left: 10px;
     padding-right: 10px;
-
+    width: 90%;
 }
 
 div.portfoliotext {
@@ -188,9 +189,13 @@ div.row p {
         text-align: center;
         font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
         "Arial Narrow", Helvetica, Arial, "Lucida Grande", sans-serif;
-        font-size: 16pt;
+        font-size: 14pt;
+        margin: 0 auto;
         padding-top: 40px;
         padding-bottom: 40px;
+        padding-left: 10px;
+        padding-right: 10px;
+        width: 60%;
     }
 
 }
