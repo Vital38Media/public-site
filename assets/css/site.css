@@ -5,7 +5,7 @@ body {
 }
 
 div.discount {
-    background-color: #c12000;
+    background-color: rgba(193, 32, 0, .9);
     min-height: 20px;
     width: 100%;
     color: white;
@@ -183,6 +183,22 @@ div.row p {
         background-position: top;
         background-color: #f4f4f4;
         background-size: fill;
+    }
+
+    div.discount {
+        background-color: rgba(193, 32, 0, 0.7);
+        min-height: 20px;
+        width: 100%;
+        color: white;
+        border-color: grey;
+        box-shadow: 0px 2px 2px grey;
+        text-align: center;
+    }
+
+    div.discount p {
+        padding-top: 9px;
+        font-size: 14px;
+        overflow-x: wrap;
     }
 
     img.smallheader {
