@@ -34,6 +34,11 @@ div.discount p {
     font-size: 20px;
 }
 
+.progress {
+    margin: 0 auto;
+    width: 50%;
+}
+
 p.creditText {
     position: absolute;
     bottom: 70px;
@@ -183,6 +188,11 @@ div.row p {
         background-position: top;
         background-color: #f4f4f4;
         background-size: fill;
+    }
+
+    .progress {
+        margin: 0 auto;
+        width: 30%;
     }
 
     div.discount {
