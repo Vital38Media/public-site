@@ -10,7 +10,7 @@ function showPortfolio() {
      });
      setTimeout(function () {
          $('.portfoliotext').fadeIn(1000);
-     }, 1000)
+     }, 500)
 }
 
 function returnHome() {
@@ -22,7 +22,7 @@ function returnHome() {
     });
     setTimeout(function () {
         $('.mainText').fadeIn(1000);
-    }, 1000)
+    }, 500)
 }
 
 function showContact() {
@@ -34,7 +34,7 @@ function showContact() {
     });
     setTimeout(function () {
         $('.contactForm').fadeIn(1000);
-    }, 1000)
+    }, 500)
     fbq('track', 'Lead', {
         value: 0,
         currency: 'USD'
@@ -56,8 +56,18 @@ $(document).ready(function () {
     $('.contactForm').hide();
 })
 $(window).on("load", function(){
+    var location = window.location.href;
     $('#cover').fadeOut();
-    $('.mainText').fadeIn(1000);
+    switch (location.match(/\?(.*)/)[1]) {
+        case 'contact':
+            showContact();
+            break;
+        case 'portfolio':
+            showPortfolio();
+            break;
+        default:
+            returnHome();
+    }
       mixpanel.track("Content Loaded", {
           "isRetina": window.devicePixelRatio > 1,
           "name": "home",
