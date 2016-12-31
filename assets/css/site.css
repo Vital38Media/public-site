@@ -145,6 +145,20 @@ div.row {
 div.row p {
     padding-top: 40px;
 }
+
+.contactForm textarea {
+    width: 50%;
+}
+
+.contactForm input {
+    width: 50%;
+}
+
+.contactForm form {
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+}
 @media only screen and (min-width: 768px) {
     body {
         background: url(site_bg.png) no-repeat;
