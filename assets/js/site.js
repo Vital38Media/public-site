@@ -52,7 +52,6 @@ $(document).ready(function () {
     $('.secondarylogo').hide();
     $('.mainText').hide();
     $('.portfoliotext').hide();
-    $('.mainContainer').hide();
     $('.contactForm').hide();
 })
 $(window).on("load", function(){
