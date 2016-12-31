@@ -35,6 +35,12 @@ function showContact() {
     setTimeout(function () {
         $('.contactForm').fadeIn(1000);
     }, 1000)
+    fbq('track', 'Lead', {
+        value: 0,
+        currency: 'USD'
+    });
+
+
 }
 
 function hideAll() {
@@ -57,6 +63,12 @@ $(window).on("load", function(){
           "name": "home",
           "internal": false
       });
+    fbq('track', 'ViewContent', {
+        value: 0,
+        currency: 'USD'
+    });
+
+
     // $(function(){
     //     $(".textLine").typed({
     //       strings: ["<strong>38%</strong> of consumers <em>stop</em> engaging online <br> if the content is unattractive",
