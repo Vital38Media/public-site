@@ -2,7 +2,7 @@
 
 
 function showPortfolio() {
-     $('.mainText').fadeOut(1000);
+     hideAll();
      mixpanel.track("Page View", {
          "isRetina": window.devicePixelRatio > 1,
          "name": "portfolio",
@@ -14,7 +14,7 @@ function showPortfolio() {
 }
 
 function returnHome() {
-    $('.portfoliotext').fadeOut(1000);
+    hideAll();
     mixpanel.track("Page View", {
         "isRetina": window.devicePixelRatio > 1,
         "name": "home",
@@ -24,11 +24,30 @@ function returnHome() {
         $('.mainText').fadeIn(1000);
     }, 1000)
 }
+
+function showContact() {
+    hideAll();
+    mixpanel.track("Page View", {
+        "isRetina": window.devicePixelRatio > 1,
+        "name": "contact",
+        "internal": true
+    });
+    setTimeout(function () {
+        $('.contactForm').fadeIn(1000);
+    }, 1000)
+}
+
+function hideAll() {
+    $('.mainText').fadeOut(1000);
+    $('.portfoliotext').fadeOut(1000);
+    $('.contactForm').fadeOut(1000);
+}
 $(document).ready(function () {
     $('.secondarylogo').hide();
     $('.mainText').hide();
     $('.portfoliotext').hide();
     $('.mainContainer').hide();
+    $('.contactForm').hide();
 })
 $(window).on("load", function(){
     $('#cover').fadeOut();

@@ -56,7 +56,7 @@ mixpanel.init("b2e7936bd79adaee36240f7157e98082");</script><!-- end Mixpanel -->
             <span>
                 <br>
                 <br>
-                <strong><a href="http://www.vital38.com">V38</a></strong> | About | <a class="PortfolioURL" href="#" onclick="showPortfolio()">Portfolio</a>
+                <span class="nav">About | <a class="PortfolioURL" href="#" onclick="showPortfolio()">Portfolio </a> | <a href="#" onclick="showContact()"> Contact</a></span>
                 <br>
                 <br>
                 <span class="mainTextJustified">
@@ -87,7 +87,7 @@ mixpanel.init("b2e7936bd79adaee36240f7157e98082");</script><!-- end Mixpanel -->
                         <img src="assets/img/Vital38Logo.png" class="smallheader" width="100px"></img>
                         <br>
                         <br>
-                        <strong><a href="http://www.vital38.com">V38</a></strong> | <a class="aboutURL" href="#" onclick="returnHome()">About</a> | Portfolio
+                        <a class="aboutURL" href="#" onclick="returnHome()">About</a> | Portfolio | <a href="#" onclick="showContact()"> Contact</a>
 
                     </div>
                 </div>
@@ -112,6 +112,29 @@ mixpanel.init("b2e7936bd79adaee36240f7157e98082");</script><!-- end Mixpanel -->
 
                     </div>
                 </div>
+        </div>
+        <div class="contactForm">
+            <p>
+                <img src="assets/img/Vital38Logo.png" class="smallheader" width="100px"></img>
+                <br>
+                <br>
+                <span class="nav"><a class="aboutURL" href="#" onclick="returnHome()">About</a> | <a class="PortfolioURL" href="#" onclick="showPortfolio()">Portfolio</a> | Contact</span>
+                <br>
+                Send us a message and we will get back right away! Whether you have an idea for your next
+                project or simply have a question about our services, we'll happily get back to you!
+                <br>
+                <form action="https://formspree.io/projects@vital38.com"
+                      method="POST">
+                    <input type="text" name="name" placeholder="Your name">
+                    <input type="email" name="_replyto" placeholder="Your email">
+                    <br>
+                    <br>
+                    <textarea name="message" placeholder="Your message" cols="49"></textarea>
+                    <br>
+                    <br>
+                    <input type="submit" value="Send">
+                </form>
+            </p>
         </div>
     </div>
 </body>

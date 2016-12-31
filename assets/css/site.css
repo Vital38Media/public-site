@@ -40,6 +40,10 @@ img.secondarylogo {
 
 }
 
+span.nav {
+    font-size: 16pt;
+}
+
 img.smallheader {
     user-drag: none;
     user-select: none;
@@ -62,7 +66,20 @@ p.mainText {
     text-align: center;
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
     "Arial Narrow", Helvetica, Arial, "Lucida Grande", sans-serif;
-    font-size: 12pt;
+    font-size: 16pt;
+    margin: 0 auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 90%;
+}
+
+.contactForm p {
+    text-align: center;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
+    "Arial Narrow", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-size: 16pt;
     margin: 0 auto;
     padding-top: 40px;
     padding-bottom: 40px;
@@ -78,6 +95,16 @@ div.portfoliotext {
     font-size: 16pt;
     padding-top: 40px;
     padding-bottom: 20px;
+}
+
+div.contactForm {
+    text-align: center;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
+    "Arial Narrow", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-size: 16pt;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    height: 100%;
 }
 
 div.mainarea {
@@ -199,6 +226,23 @@ div.row p {
         padding-left: 10px;
         padding-right: 10px;
         width: 60%;
+    }
+
+    .contactForm p {
+        text-align: center;
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
+        "Arial Narrow", Helvetica, Arial, "Lucida Grande", sans-serif;
+        font-size: 14pt;
+        margin: 0 auto;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        padding-left: 10px;
+        padding-right: 10px;
+        width: 60%;
+    }
+
+    span.nav {
+        font-size: 16pt;
     }
 
 }
