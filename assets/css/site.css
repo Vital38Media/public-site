@@ -197,6 +197,7 @@ div.row p {
 
     div.discount p {
         padding-top: 9px;
+        padding-left: 0;
         font-size: 14px;
         overflow-x: wrap;
     }
