@@ -58,16 +58,21 @@ $(document).ready(function () {
 $(window).on("load", function(){
     var location = window.location.href;
     $('#cover').fadeOut();
-    switch (location.match(/\?(.*)/)[1]) {
-        case 'contact':
-            showContact();
-            break;
-        case 'portfolio':
-            showPortfolio();
-            break;
-        default:
-            returnHome();
+    if (location.match(/\?(.*)/)) {
+        switch (location.match(/\?(.*)/)[1]) {
+            case 'contact':
+                showContact();
+                break;
+            case 'portfolio':
+                showPortfolio();
+                break;
+            default:
+                returnHome();
+        }
+    } else {
+        returnHome();
     }
+
       mixpanel.track("Content Loaded", {
           "isRetina": window.devicePixelRatio > 1,
           "name": "home",
