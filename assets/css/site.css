@@ -161,11 +161,11 @@ div.row p {
 }
 
 .contactForm textarea {
-    width: 50%;
+    width: 90%;
 }
 
 .contactForm input {
-    width: 50%;
+    width: 90%;
 }
 
 .contactForm form {
@@ -271,6 +271,14 @@ div.row p {
 
     span.nav {
         font-size: 16pt;
+    }
+
+    .contactForm textarea {
+        width: 50%;
+    }
+
+    .contactForm input {
+        width: 50%;
     }
 
 }
