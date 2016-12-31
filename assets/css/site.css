@@ -6,7 +6,7 @@ body {
 
 div.discount {
     background-color: #c12000;
-    height: 20px;
+    min-height: 20px;
     width: 100%;
     color: white;
     border-color: grey;
@@ -15,7 +15,10 @@ div.discount {
 }
 
 div.discount p {
-    padding-left: 30px;
+    padding-top: 6px;
+    padding-left: 5%;
+    font-size: 14px;
+    overflow-x: wrap;
 }
 
 #cover {
@@ -95,7 +98,7 @@ p.mainText {
     "Arial Narrow", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-size: 16pt;
     margin: 0 auto;
-    padding-top: 40px;
+    padd
     padding-bottom: 40px;
     padding-left: 10px;
     padding-right: 10px;
@@ -123,6 +126,7 @@ div.contactForm {
 
 div.mainarea {
     position: absolute;
+    padding-top: 40px;
     top: 0px;
     left: 0px;
     width: 100%;
@@ -262,7 +266,7 @@ div.row p {
         "Arial Narrow", Helvetica, Arial, "Lucida Grande", sans-serif;
         font-size: 14pt;
         margin: 0 auto;
-        padding-top: 40px;
+        padding-top: 0px;
         padding-bottom: 40px;
         padding-left: 10px;
         padding-right: 10px;
