@@ -117,7 +117,6 @@ $(window).on("load", function(){
     }
 
     runDevSetup(development);
-    console.log(localStorage.modal);
     runModal();
 
     fireEvent('fbq', 'ViewContent', {
