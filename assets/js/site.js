@@ -12,37 +12,38 @@ function showPortfolio() {
 }
 
 function returnHome() {
+    // Hide all content
     hideAll();
+    // Fire mixpanel event
     fireEvent('mixpanel', 'Page View', {
         "isRetina": window.devicePixelRatio > 1,
         "name": "home",
         "internal": true
     });
+    // Display contact area
     setTimeout(function () {
         $('.mainText').fadeIn(1000);
     }, 500)
 }
 
 function showContact() {
+    // Hide all content
     hideAll();
-
+    // Fire mixpanel event
     fireEvent('mixpanel', 'Page View', {
         "isRetina": window.devicePixelRatio > 1,
         "name": "contact",
         "internal": true
     });
-
-    setTimeout(function () {
-        $('.contactForm').fadeIn(1000);
-    }, 500)
-
+    // Fire FB event
     fireEvent('fbq', 'Lead', {
         value: 0,
         currency: 'USD'
     });
-
-
-
+    // Display contact area
+    setTimeout(function () {
+        $('.contactForm').fadeIn(1000);
+    }, 500)
 }
 
 function hideAll() {
@@ -51,6 +52,8 @@ function hideAll() {
     $('.contactForm').fadeOut(1000);
 }
 
+// Fires an event to its respective service provided that development mode
+// is not enabled.
 function fireEvent(platform, eventName, payload) {
     if (!development) {
         switch (platform) {
@@ -68,6 +71,8 @@ function fireEvent(platform, eventName, payload) {
     }
 }
 
+// Submits the form data to Mixpanel before the form data is emailed to
+// projects@vital38.com
 function formSubmit(formData) {
     mixpanelObj = {};
     formData.forEach(function (e) {
@@ -79,15 +84,17 @@ function formSubmit(formData) {
     }
 }
 
+// Displays the modal IF a promotion is currently running
+// (indicated in devconf.js)
 function runModal() {
-    if (!localStorage.modal || (parseInt(localStorage.modal) + 86400000 < Date.now())) {
-        setTimeout(function () {
-            $('#myModal').modal('show');
-            localStorage.modal = Date.now();
-        }, 3000)
-
+    if (isPromo) {
+        if (!localStorage.modal || (parseInt(localStorage.modal) + 86400000 < Date.now())) {
+            setTimeout(function () {
+                $('#myModal').modal('show');
+                localStorage.modal = Date.now();
+            }, 3000)
+        }
     }
-
 }
 
 function runDevSetup(r) {
@@ -97,36 +104,3 @@ function runDevSetup(r) {
         localStorage.setItem('modal', 0);
     }
 }
-
-$(document).ready(function () {
-    $('.secondarylogo').hide();
-    $('.mainText').hide();
-    $('.portfoliotext').hide();
-    $('.contactForm').hide();
-})
-$(window).on("load", function(){
-    var location = window.location.href;
-    $('#cover').fadeOut();
-    if (location.match(/\?(.*)/)) {
-        switch (location.match(/\?(.*)/)[1]) {
-            case 'contact':
-                showContact();
-                break;
-            case 'portfolio':
-                showPortfolio();
-                break;
-            default:
-                returnHome();
-        }
-    } else {
-        returnHome();
-    }
-
-    runDevSetup(development);
-    runModal();
-
-    fireEvent('fbq', 'ViewContent', {
-        value: 0,
-        currency: 'USD'
-    })
-})
