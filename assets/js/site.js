@@ -73,11 +73,11 @@ function fireEvent(platform, eventName, payload) {
 
 function runModal() {
     console.log("running...")
-    if (localStorage.modal === "true") {
+    if (parseInt(localStorage.modal) + 86400000 < Date.now()) {
         setTimeout(function () {
             console.log("ok");
             $('#myModal').modal('show');
-            localStorage.modal = false;
+            localStorage.modal = Date.now();
         }, 3000)
 
     }
@@ -88,7 +88,7 @@ function runDevSetup(r) {
     if (r) {
         // Make the modal show on every page load regardless of its current
         // state
-        localStorage.setItem('modal', true);
+        localStorage.setItem('modal', 0);
     }
 }
 
@@ -116,7 +116,7 @@ $(window).on("load", function(){
         returnHome();
     }
 
-    // runDevSetup(development);
+    runDevSetup(development);
     console.log(localStorage.modal);
     runModal();
 
