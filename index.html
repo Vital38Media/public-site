@@ -156,7 +156,7 @@ mixpanel.init("b2e7936bd79adaee36240f7157e98082");</script><!-- end Mixpanel -->
                     <textarea name="message" placeholder="Your message"></textarea>
                     <br>
                     <br>
-                    <input type="submit" value="Send">
+                    <input type="submit" value="Send" onMouseDown="formSubmit($('form').serializeArray())">
                 </form>
             </p>
         </div>

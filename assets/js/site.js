@@ -62,10 +62,20 @@ function fireEvent(platform, eventName, payload) {
                 break;
             default:
                 console.error("Invalid Event Type", eventName, payload);
-
         }
     } else {
         console.warn("Development is enabled, so no events will be sent!", platform, eventName, payload);
+    }
+}
+
+function formSubmit(formData) {
+    mixpanelObj = {};
+    formData.forEach(function (e) {
+        mixpanelObj[e.name] = e.value;
+    });
+    fireEvent('mixpanel', 'formSubmit', mixpanelObj);
+    if (development) {
+        alert("Your data wasn't sent since the site is running in development mode!")
     }
 }
 
