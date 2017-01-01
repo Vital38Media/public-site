@@ -1,6 +1,4 @@
 // auto generated Javascript file, automatically added to index.html
-var development = false;
-
 function showPortfolio() {
      hideAll();
      fireEvent('mixpanel', 'Page View', {
