@@ -1,9 +1,9 @@
 // auto generated Javascript file, automatically added to index.html
-
+var development = false;
 
 function showPortfolio() {
      hideAll();
-     mixpanel.track("Page View", {
+     fireEvent('mixpanel', 'Page View', {
          "isRetina": window.devicePixelRatio > 1,
          "name": "portfolio",
          "internal": true
@@ -15,7 +15,7 @@ function showPortfolio() {
 
 function returnHome() {
     hideAll();
-    mixpanel.track("Page View", {
+    fireEvent('mixpanel', 'Page View', {
         "isRetina": window.devicePixelRatio > 1,
         "name": "home",
         "internal": true
@@ -27,18 +27,22 @@ function returnHome() {
 
 function showContact() {
     hideAll();
-    mixpanel.track("Page View", {
+
+    fireEvent('mixpanel', 'Page View', {
         "isRetina": window.devicePixelRatio > 1,
         "name": "contact",
         "internal": true
     });
+
     setTimeout(function () {
         $('.contactForm').fadeIn(1000);
     }, 500)
-    fbq('track', 'Lead', {
+
+    fireEvent('fbq', 'Lead', {
         value: 0,
         currency: 'USD'
     });
+
 
 
 }
@@ -48,6 +52,25 @@ function hideAll() {
     $('.portfoliotext').fadeOut(1000);
     $('.contactForm').fadeOut(1000);
 }
+
+function fireEvent(platform, eventName, payload) {
+    if (!development) {
+        switch (platform) {
+            case "fbq":
+                fbq('track', eventName, payload);
+                break;
+            case "mixpanel":
+                mixpanel.track(eventName, payload);
+                break;
+            default:
+                console.error("Invalid Event Type", eventName, payload);
+
+        }
+    } else {
+        console.warn("Development is enabled, so no events will be sent!", platform, eventName, payload);
+    }
+}
+
 $(document).ready(function () {
     $('.secondarylogo').hide();
     $('.mainText').hide();
@@ -72,13 +95,8 @@ $(window).on("load", function(){
         returnHome();
     }
 
-      mixpanel.track("Content Loaded", {
-          "isRetina": window.devicePixelRatio > 1,
-          "name": "home",
-          "internal": false
-      });
-    fbq('track', 'ViewContent', {
+    fireEvent('fbq', 'ViewContent', {
         value: 0,
         currency: 'USD'
-    });
+    })
 })
