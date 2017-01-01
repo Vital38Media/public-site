@@ -69,6 +69,27 @@ function fireEvent(platform, eventName, payload) {
     }
 }
 
+function runModal() {
+    console.log("running...")
+    if (parseInt(localStorage.modal) + 86400000 < Date.now()) {
+        setTimeout(function () {
+            console.log("ok");
+            $('#myModal').modal('show');
+            localStorage.modal = Date.now();
+        }, 3000)
+
+    }
+
+}
+
+function runDevSetup(r) {
+    if (r) {
+        // Make the modal show on every page load regardless of its current
+        // state
+        localStorage.setItem('modal', 0);
+    }
+}
+
 $(document).ready(function () {
     $('.secondarylogo').hide();
     $('.mainText').hide();
@@ -92,6 +113,9 @@ $(window).on("load", function(){
     } else {
         returnHome();
     }
+
+    runDevSetup(development);
+    runModal();
 
     fireEvent('fbq', 'ViewContent', {
         value: 0,
