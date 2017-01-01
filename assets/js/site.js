@@ -70,10 +70,8 @@ function fireEvent(platform, eventName, payload) {
 }
 
 function runModal() {
-    console.log("running...")
     if (!localStorage.modal || (parseInt(localStorage.modal) + 86400000 < Date.now())) {
         setTimeout(function () {
-            console.log("ok");
             $('#myModal').modal('show');
             localStorage.modal = Date.now();
         }, 3000)
