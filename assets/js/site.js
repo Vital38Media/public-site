@@ -74,13 +74,16 @@ function fireEvent(platform, eventName, payload) {
 // Submits the form data to Mixpanel before the form data is emailed to
 // projects@vital38.com
 function formSubmit(formData) {
-    mixpanelObj = {};
+    var mixpanelObj = {};
+    var mixpanelStr = "{";
     formData.forEach(function (e) {
+        mixpanelStr = mixpanelStr + e.name + ": " + e.value + ", ";
         mixpanelObj[e.name] = e.value;
     });
     fireEvent('mixpanel', 'formSubmit', mixpanelObj);
     if (development) {
-        alert("Your data wasn't sent since the site is running in development mode!")
+        mixpanelStr = mixpanelStr + "DATA NOT SENT, DEVELOPMENT MODE ENABLED}";
+        alert(mixpanelStr);
     }
 }
 
