@@ -4,4 +4,4 @@
 var development = false;
 
 // Indicates if a promotion is running
-var isPromo = true;
+var isPromo = false;
