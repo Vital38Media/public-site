@@ -1,109 +1,90 @@
-// auto generated Javascript file, automatically added to index.html
-function showPortfolio() {
-     hideAll();
-     fireEvent('mixpanel', 'Page View', {
-         "isRetina": window.devicePixelRatio > 1,
-         "name": "portfolio",
-         "internal": true
-     });
-     setTimeout(function () {
-         $('.portfoliotext').fadeIn(1000);
-     }, 500)
+var v38State = {
+    displays: {
+        about: false,
+        services: false,
+        contact: false
+    },
+    positions: {
+        home: 0,
+        about: 625
+    },
+    text: {
+        about:  "<br>According to a report from Adobe, 38% of consumers will stop " +  
+            "engaging <br> with a product or website if the content is unattractive.<br><br>" +
+            "Vital 38 is a media production firm based in the silicon valley.<br>" +
+            "We work with you to create a digital media solution that is fast, " +
+            "beautiful,<br> and tailored to your every need. <br><br>With a focus on incredible, " +
+            "modern design, V38 will help small businesses,<br>companies, and individuals " +
+            "grow with a well-designed<br>and meticulously planned online presence. " +
+            "<br>" +
+            "<br>" +
+            "Web design, graphic design, cinematography, and photography come " +
+            "together<br>in one seamless service, or compartmentalized services to " +
+            "meet<br>any specific need. " +
+            "<br>" +
+            "<br>" +
+            "Don't lose the vital 38%",
+        contact: "<br> We'd love to hear from you!<br><br>" +
+            "Whether you have a project in mind or just want to chat about what we do,<br>" +
+            "send us an email at <strong><a href=\"mailto:projects@vital38.com\">projects@vital38.com</a></strong> or call us at <strong>(650) 336-8624</strong>" +
+            "<br><br>We'd love to get to know you, and can't wait to start helping<br>" +
+            "you achieve your dream, whatever that may be."
+    }
+
 }
 
-function returnHome() {
-    // Hide all content
-    hideAll();
-    // Fire mixpanel event
-    fireEvent('mixpanel', 'Page View', {
-        "isRetina": window.devicePixelRatio > 1,
-        "name": "home",
-        "internal": true
-    });
-    // Display contact area
-    setTimeout(function () {
-        $('.mainText').fadeIn(1000);
-    }, 500)
-}
+$(window).scroll(function(){
+    if ($(this).scrollTop() > $('.contact').position().top - (window.innerHeight/3*2) && !v38State.displays.contact) {
+        v38State.displays.contact = true;
+        Typed.new('.contactHeader', {
+           strings: ["Contact"],
+            showCursor: true,
+            cursorChar: "|",
+            typeSpeed: 1,
+            callback: function() {
+                Typed.new('.contactText', {
+                    strings: [v38State.text.contact],
+                    showCursor: false,
+                    typeSpeed: -50000,
+                    
+	            });
+            },
+	    });
+    } else if ($(this).scrollTop() > $('.services').position().top - (window.innerHeight/3*2) && !v38State.displays.services) {
+        v38State.displays.services = true;
+        Typed.new('.servicesHeader', {
+           strings: ["Services"],
+            showCursor: true,
+            cursorChar: "|",
+            typeSpeed: 1,
+            callback: function() {
+                $('.servicesContent').fadeIn();
+            },
+	    });
 
-function showContact() {
-    // Hide all content
-    hideAll();
-    // Fire mixpanel event
-    fireEvent('mixpanel', 'Page View', {
-        "isRetina": window.devicePixelRatio > 1,
-        "name": "contact",
-        "internal": true
-    });
-    // Fire FB event
-    fireEvent('fbq', 'Lead', {
-        value: 0,
-        currency: 'USD'
-    });
-    // Display contact area
-    setTimeout(function () {
-        $('.contactForm').fadeIn(1000);
-    }, 500)
-}
+    }  else if ($(this).scrollTop() > $('.about').position().top - (window.innerHeight/3*2) && !v38State.displays.about) {
+        v38State.displays.about = true;
+        Typed.new('.aboutHeader', {
+           strings: ["About"],
+            showCursor: true,
+            cursorChar: "|",
+            typeSpeed: 1,
+            callback: function() {
+                Typed.new('.aboutText', {
+                    strings: [v38State.text.about],
+                    showCursor: false,
+                    typeSpeed: -50000,
+                    
+	            });
+            },
+	    });
+    }
+});
 
-function hideAll() {
-    $('.mainText').fadeOut(1000);
-    $('.portfoliotext').fadeOut(1000);
-    $('.contactForm').fadeOut(1000);
-}
-
-// Fires an event to its respective service provided that development mode
-// is not enabled.
-function fireEvent(platform, eventName, payload) {
-    if (!development) {
-        switch (platform) {
-            case "fbq":
-                fbq('track', eventName, payload);
-                break;
-            case "mixpanel":
-                mixpanel.track(eventName, payload);
-                break;
-            default:
-                console.error("Invalid Event Type", eventName, payload);
-        }
+function scrollToHandler(destinationClass) {
+    if (!destinationClass) {
+         window.scrollTo(0, 0);
     } else {
-        console.warn("Development is enabled, so no events will be sent!", platform, eventName, payload);
-    }
-}
-
-// Submits the form data to Mixpanel before the form data is emailed to
-// projects@vital38.com
-function formSubmit(formData) {
-    var mixpanelObj = {};
-    var mixpanelStr = "{";
-    formData.forEach(function (e) {
-        mixpanelStr = mixpanelStr + e.name + ": " + e.value + ", ";
-        mixpanelObj[e.name] = e.value;
-    });
-    fireEvent('mixpanel', 'formSubmit', mixpanelObj);
-    if (development) {
-        mixpanelStr = mixpanelStr + "DATA NOT SENT, DEVELOPMENT MODE ENABLED}";
-        alert(mixpanelStr);
-    }
-}
-
-// Displays the modal IF a promotion is currently running
-// (indicated in devconf.js)
-function runModal() {
-    if (isPromo) {
-        if (!localStorage.modal || (parseInt(localStorage.modal) + 86400000 < Date.now())) {
-            setTimeout(function () {
-                $('#myModal').modal('show');
-                localStorage.modal = Date.now();
-            }, 3000)
-        }
-    }
-}
-
-function runDevSetup(r) {
-    if (r) {
-        // Make the modal show on every page load regardless of its current
-        // state
-        localStorage.setItem('modal', 0);
+        window.scrollTo(0, $('.' + destinationClass).position().top - 101);
     }
 }
