@@ -1,6 +1,6 @@
 @media  (max-width : 600) {
-    div.typedText {
-        font-size: .2em;
+    .mobileHidden {
+        display: none;
     }
 }
 
@@ -37,6 +37,11 @@ div.main {
     padding-left: 20px;
     padding-top: 150px;
     min-height: 100vh;
+}
+
+div.homePageModules {
+    color: white;
+    text-align: center;
 }
 
 div.bodymodule {
@@ -123,7 +128,6 @@ div.typedText {
     color: white;
     font-family: 'Source Code Pro', monospace;
     font-size: 1.5em;
-    margin: 10px;
     display: inline;
 }
 
@@ -174,6 +178,10 @@ div.shellbar {
 
 i.bigIcon {
     font-size: 4em;
+}
+
+i.mediumIcon {
+    font-size: 3em;
 }
 
 
