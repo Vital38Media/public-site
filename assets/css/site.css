@@ -8,6 +8,15 @@ body {
     background-color: black;
 }
 
+::selection {
+  background: rgb(193, 39, 45); /* WebKit/Blink Browsers */
+  color: black;
+}
+::-moz-selection {
+  background: rgb(193, 39, 45); /* Gecko Browsers */
+  color: black;
+}
+
 div.header {
     padding-top: 20px;
     padding-right: 20px;
@@ -48,6 +57,7 @@ div.moduleHeader {
 
 div.bodymodule > .typed-cursor {
     font-size: 3em !important;
+    color: rgb(193, 39, 45);
 }
 
 div.moduleText {
@@ -71,18 +81,42 @@ a.nav {
     float: left;
 }
 
-a.nav:hover {
+a:hover {
     cursor: pointer;
+    color: rgb(193, 39, 45);
+    text-decoration: none;
+}
+
+a.inline:hover {
+    color: rgb(193, 39, 45);
+    text-decoration: none;
+}
+
+a.inline {
+    color: rgb(193, 39, 45);
+}
+
+a:before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: rgb(193, 39, 45);
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
 }
 
 a {
     color: white;
     font-family: 'Roboto', sans-serif;
-}
-
-a:hover {
-    color: white;
-    text-decoration: none;
 }
 
 div.typedText {

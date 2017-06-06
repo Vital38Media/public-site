@@ -9,9 +9,9 @@ var v38State = {
         about: 625
     },
     text: {
-        about:  "<br>According to a report from Adobe, 38% of consumers will stop " +  
+        about:  "<br>According to a report from Adobe<a class=\"inline\" href=\"http://wwwimages.adobe.com/content/dam/Adobe/en/max/2015/pdfs/state-of-content-oct.pdf\">*</a>, 38% of consumers will stop " +  
             "engaging <br> with a product or website if the content is unattractive.<br><br>" +
-            "Vital 38 is a media production firm based in the silicon valley.<br>" +
+            "Vital 38 is a media production firm based in the Silicon Valley.<br>" +
             "We work with you to create a digital media solution that is fast, " +
             "beautiful,<br> and tailored to your every need. <br><br>With a focus on incredible, " +
             "modern design, V38 will help small businesses,<br>companies, and individuals " +
@@ -58,7 +58,7 @@ $(window).scroll(function(){
             cursorChar: "|",
             typeSpeed: 1,
             callback: function() {
-                $('.servicesContent').fadeIn();
+                $('.servicesContent').slideDown();
             },
 	    });
 
