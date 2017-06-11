@@ -1,7 +1,25 @@
-@media  (max-width : 600) {
-    .mobileHidden {
-        display: none;
-    }
+@media(max-width: 900px) {
+div.shell div {
+    font-size: 0.9em;
+}
+
+div.shell {
+    width: 90% !important;
+    min-height: 200px !important;
+}
+
+div.shell .typed-cursor {
+    font-size: 0.9em !important;
+}
+
+a.nav {
+    font-size: 1em !important;
+}
+
+div.moduleText {
+    font-size: 1.2em !important;
+    width: 90% !important;
+}
 }
 
 body {
@@ -70,6 +88,7 @@ div.moduleText {
     font-size: 1.4em;
     font-family: 'Roboto', sans-serif;
     margin-left: 20px;
+    width: 50%;
 }
 
 div.servicesContent {
@@ -127,14 +146,14 @@ a {
 div.typedText {
     color: white;
     font-family: 'Source Code Pro', monospace;
-    font-size: 1.5em;
+    font-size: 1.4em;
     display: inline;
 }
 
 div.shell {
     border: 1px solid white;
     min-height: 300px;
-    width: 60%;
+    width: 70%;
     margin: 0 auto;
     border-radius: 10px;
 }
@@ -149,6 +168,11 @@ div.shellbar {
     font-family: 'Source Code Pro', monospace;
     font-size: .7em;
     padding-top: 3px;
+}
+
+div.servicesContent > p {
+    width: 80%;
+    margin: 0 auto;
 }
 
 .typed-cursor {
