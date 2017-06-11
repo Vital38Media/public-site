@@ -14,6 +14,7 @@ div.shell .typed-cursor {
 
 a.nav {
     font-size: 1em !important;
+    padding-left: 10px !important;
 }
 
 div.moduleText {
