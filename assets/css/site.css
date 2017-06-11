@@ -1,315 +1,214 @@
-/* auto generated CSS file, automatically added to index.html */
+@media(max-width: 900px) {
+div.shell div {
+    font-size: 0.9em;
+}
+
+div.shell {
+    width: 90% !important;
+    min-height: 200px !important;
+}
+
+div.shell .typed-cursor {
+    font-size: 0.9em !important;
+}
+
+a.nav {
+    font-size: 1em !important;
+}
+
+div.moduleText {
+    font-size: 1.2em !important;
+    width: 90% !important;
+}
+}
 
 body {
-    background-color: #f4f4f4;
+    background-color: black;
 }
 
-div.discount {
-    background-color: rgba(193, 32, 0, .9);
-    min-height: 20px;
+::selection {
+  background: rgb(193, 39, 45); /* WebKit/Blink Browsers */
+  color: black;
+}
+::-moz-selection {
+  background: rgb(193, 39, 45); /* Gecko Browsers */
+  color: black;
+}
+
+div.header {
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    float: left;
     width: 100%;
+    position: fixed;
+    background-color: black;
+    z-index: 9999;
+}
+
+div.nav {
+    float: right;
+    padding-top: 20px;
+}
+
+div.main {
+    padding-left: 20px;
+    padding-top: 150px;
+    min-height: 100vh;
+}
+
+div.homePageModules {
     color: white;
-    border-color: grey;
-    box-shadow: 0px 2px 2px black;
-    overflow-x: scroll;
-}
-
-div.discount p {
-    padding-top: 9px;
-    padding-left: 5%;
-    font-size: 14px;
-    overflow-x: wrap;
-}
-
-#cover {
-	background-color: #ebebe8;
-	position:fixed;
-	width:100%;
-	height:100%;
-	top:0px;
-	left:0px;
-	z-index:1000;
     text-align: center;
-    padding-top: 20%;
-    font-size: 20px;
 }
 
-.progress {
-    margin: 0 auto;
+div.bodymodule {
+    min-height: calc(100vh - 100px);
+}
+
+div.bodymoduleDouble {
+    min-height: calc(2*(100vh - 100px));
+}
+
+div.moduleHeader {
+    color: white;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 3em;
+    margin-left: 20px;
+    display: inline;
+}
+
+div.bodymodule > .typed-cursor {
+    font-size: 3em !important;
+    color: rgb(193, 39, 45);
+}
+
+div.moduleText {
+    color: white;
+    font-size: 1.4em;
+    font-family: 'Roboto', sans-serif;
+    margin-left: 20px;
     width: 50%;
 }
 
-p.creditText {
-    position: absolute;
-    bottom: 70px;
-    right: -45px;
-    transform: rotate(90deg);
-    color: grey;
-    opacity: 0;
-}
-img.mainlogo {
-    width: 100px;
-    margin-top: 10%;
-    margin-left: 35%;
-    margin-right: 50%;
-}
-
-img.secondarylogo {
-
-    width: 100px;
-    margin-left: 35%;
-    margin-right: 50%;
-
-}
-
-span.nav {
-    font-size: 16pt;
-}
-
-img.smallheader {
-    user-drag: none;
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-drag: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-}
-div.textLine {
-    width: 100%;
-    text-align: center;
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
-    "Arial Narrow", Helvetica, Arial, "Lucida Grande", sans-serif;
-    font-size: 14pt;
-    height: 200px;
-
-}
-
-p.mainText {
-    text-align: center;
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
-    "Arial Narrow", Helvetica, Arial, "Lucida Grande", sans-serif;
-    font-size: 16pt;
-    margin: 0 auto;
+div.servicesContent {
     padding-top: 40px;
-    padding-bottom: 40px;
-    padding-left: 10px;
-    padding-right: 10px;
-    width: 90%;
-}
-
-.contactForm p {
+    color: white;
+    font-size: 1.4em;
+    font-family: 'Roboto', sans-serif;
     text-align: center;
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
-    "Arial Narrow", Helvetica, Arial, "Lucida Grande", sans-serif;
-    font-size: 16pt;
-    margin: 0 auto;
-    padd
-    padding-bottom: 40px;
-    padding-left: 10px;
-    padding-right: 10px;
-    width: 90%;
 }
 
-div.portfoliotext {
-    text-align: center;
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
-    "Arial Narrow", Helvetica, Arial, "Lucida Grande", sans-serif;
-    font-size: 16pt;
-    padding-top: 40px;
-    padding-bottom: 20px;
-}
-
-div.contactForm {
-    text-align: center;
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
-    "Arial Narrow", Helvetica, Arial, "Lucida Grande", sans-serif;
-    font-size: 16pt;
-    padding-top: 40px;
-    padding-bottom: 20px;
-    height: 100%;
-}
-
-div.mainarea {
-    position: absolute;
-    padding-top: 40px;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-    overflow-y: visible;
-}
-span.mainTextJustified {
-    text-align: justify;
-}
-
-p.mainText em {
-    font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-}
-
-p.navbread {
-    font-size: 14pt;
-
-}
-
-a {
-    color: #264d9a;
-    text-decoration: none;
+a.nav {
+    padding-left: 20px;
+    font-size: 1.5em;
+    float: left;
 }
 
 a:hover {
-    color: #1a3468;
+    cursor: pointer;
+    color: rgb(193, 39, 45);
     text-decoration: none;
 }
 
-div.row {
-    margin-right: 0px;
-    margin-left: 0px;
-}
-div.row p {
-    padding-top: 40px;
+a.inline:hover {
+    color: rgb(193, 39, 45);
+    text-decoration: none;
 }
 
-.contactForm textarea {
-    width: 90%;
+a.inline {
+    color: rgb(193, 39, 45);
 }
 
-.contactForm input {
-    width: 90%;
+a:before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: rgb(193, 39, 45);
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
 }
 
-.contactForm form {
-    display: block;
+a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+a {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+div.typedText {
+    color: white;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 1.4em;
+    display: inline;
+}
+
+div.shell {
+    border: 1px solid white;
+    min-height: 300px;
+    width: 70%;
     margin: 0 auto;
-    width: 90%;
+    border-radius: 10px;
 }
-@media only screen and (min-width: 768px) {
-    body {
-        background: url(site_bg.png) no-repeat;
-        background-position: top;
-        background-color: #f4f4f4;
-        background-size: fill;
-    }
 
-    .progress {
-        margin: 0 auto;
-        width: 30%;
-    }
-
-    div.discount {
-        background-color: rgba(193, 32, 0, 0.7);
-        min-height: 20px;
-        width: 100%;
-        color: white;
-        border-color: grey;
-        box-shadow: 0px 2px 2px grey;
-        text-align: center;
-    }
-
-    div.discount p {
-        padding-top: 9px;
-        padding-left: 0;
-        font-size: 14px;
-        overflow-x: wrap;
-    }
-
-    img.smallheader {
-        user-drag: none;
-        user-select: none;
-        -moz-user-select: none;
-        -webkit-user-drag: none;
-        -webkit-user-select: none;
-        -ms-user-select: none;
-    }
-    div.textLine {
-        width: 100%;
-        text-align: center;
-        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
-        "Arial Narrow", Helvetica, Arial, "Lucida Grande", sans-serif;
-        font-size: 16pt;
-        display: block;
-        position: absolute;
-        height: 200px;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, 35%);
-        user-drag: none;
-        user-select: none;
-        -moz-user-select: none;
-        -webkit-user-drag: none;
-        -webkit-user-select: none;
-        -ms-user-select: none;
-    }
-
-    img.mainlogo {
-        display: block;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -75%);
-        width: 200px;
-        user-drag: none;
-        user-select: none;
-        -moz-user-select: none;
-        -webkit-user-drag: none;
-        -webkit-user-select: none;
-        -ms-user-select: none;
-    }
-
-    p.creditText {
-        position: absolute;
-        bottom: 70px;
-        right: -45px;
-        transform: rotate(90deg);
-        color: grey;
-        opacity: 0.6;
-        visibility: visible;
-    }
-
-    div.mainarea {
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        width: 100%;
-        height: 100%;
-        overflow-y: scroll;
-    }
-
-    p.mainText {
-        text-align: center;
-        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
-        "Arial Narrow", Helvetica, Arial, "Lucida Grande", sans-serif;
-        font-size: 14pt;
-        margin: 0 auto;
-        padding-top: 40px;
-        padding-bottom: 40px;
-        padding-left: 10px;
-        padding-right: 10px;
-        width: 60%;
-    }
-
-    .contactForm p {
-        text-align: center;
-        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
-        "Arial Narrow", Helvetica, Arial, "Lucida Grande", sans-serif;
-        font-size: 14pt;
-        margin: 0 auto;
-        padding-top: 0px;
-        padding-bottom: 40px;
-        padding-left: 10px;
-        padding-right: 10px;
-        width: 60%;
-    }
-
-    span.nav {
-        font-size: 16pt;
-    }
-
-    .contactForm textarea {
-        width: 50%;
-    }
-
-    .contactForm input {
-        width: 50%;
-    }
-
+div.shellbar {
+    width: 100%;
+    height: 20px;
+    background-color: white;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    padding-left: 10px;
+    font-family: 'Source Code Pro', monospace;
+    font-size: .7em;
+    padding-top: 3px;
 }
+
+div.servicesContent > p {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.typed-cursor {
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+    color: white;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 1.5em;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
+i.bigIcon {
+    font-size: 4em;
+}
+
+i.mediumIcon {
+    font-size: 3em;
+}
+
+
+
+
+
