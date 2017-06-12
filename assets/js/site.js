@@ -30,8 +30,7 @@ var v38State = {
             "<br><br>We'd love to get to know you, and can't wait to start helping " +
             "you achieve your dream, whatever that may be."
     }
-
-}
+};
 
 $(window).scroll(function(){
     if ($(this).scrollTop() > $('.contact').position().top - (window.innerHeight/3*2) && !v38State.displays.contact) {

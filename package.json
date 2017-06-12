@@ -1,0 +1,25 @@
+{
+  "name": "vital38site",
+  "version": "1.0.0",
+  "description": "The public-facing website for Vital 38 media",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://keegandonley@github.com/Vital38Media/vital38media.github.io.git"
+  },
+  "author": "Keegan Donley",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vital38Media/vital38media.github.io/issues"
+  },
+  "homepage": "https://github.com/Vital38Media/vital38media.github.io#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-cssmin": "^2.2.0",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-uglify": "^3.0.1"
+  }
+}
