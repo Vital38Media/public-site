@@ -15,7 +15,7 @@
   "bugs": {
     "url": "https://github.com/Vital38Media/vital38media.github.io/issues"
   },
-  "homepage": "https://github.com/Vital38Media/vital38media.github.io#readme",
+  "homepage": "https://www.vital38.com",
   "devDependencies": {
     "grunt": "^1.0.1",
     "grunt-contrib-cssmin": "^2.2.0",
