@@ -17,7 +17,7 @@ module.exports = function(grunt) {
                     drop_console: true
                 }
             },
-            my_target: {
+            target: {
                 files: {
                     'assets/bundles/site.min.js': ['assets/js/devconf.js', 'assets/js/site.js', 'assets/js/init.js'],
                 }
@@ -26,7 +26,7 @@ module.exports = function(grunt) {
         cssmin: {
             target: {
                 files: {
-                'assets/bundles/site.min.css': ['assets/css/site.css']
+                    'assets/bundles/site.min.css': ['assets/css/site.css']
                 }
             }
         }
