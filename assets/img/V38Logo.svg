@@ -1,6 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 179.63 74.2">
     <defs>
         <style>
+            @keyframes heartbeat {
+                0% {
+                    stroke-dashoffset: 210
+                }
+                50% {
+                    stroke-dashoffset: 210
+                }
+                100% {
+                    stroke-dashoffset: 0;
+                }
+            }
             .cls-1,.cls-3 {
                 fill: none;
                 stroke-miterlimit: 10;
@@ -14,6 +25,9 @@
             .cls-3 {
                 stroke: #c1272d;
                 stroke-width: 1.3px;
+                stroke-dasharray: 210;
+                stroke-dashoffset: 210;
+                animation: heartbeat 1s linear forwards;
             }
             .cls-4 {
                 fill: #ccc;
@@ -38,7 +52,7 @@
             />
             <!-- V -->
             <path
-                class="cls-2"
+                class="cls-2 vital38-logoV"
                 d="M5.43,15.75H7L16.92,72h.16l33.2-56.2h1.78L17.9,73.57H15.63Z"
                 transform="translate(-5.43)"
             />
