@@ -1,3 +1,9 @@
+language: node_js
+node_js:
+  - 8
+before_script:
+  - npm install -g grunt
+script: grunt
 deploy:
   provider: s3
   access_key_id: AKIAJVV2FCGB6KNM4KYQ
