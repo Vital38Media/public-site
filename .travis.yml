@@ -3,6 +3,8 @@ node_js:
   - 8
 before_script:
   - npm install -g grunt
+before_deploy:
+  - rm -r node_modules package.json Gruntfile.js README.md
 script: grunt
 deploy:
   provider: s3
