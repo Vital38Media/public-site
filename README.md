@@ -1,7 +1,7 @@
-<img src="http://vital38.com/assets/img/header.png">
+<img src="https://s3-us-west-1.amazonaws.com/vital38.com/assets/img/V38Logo.svg" width="300px">
 <br>
 <br>
-According to a report from Adobe, 38% of consumers will stop engaging with a product or website if the content is unattractive. Vital 38 is a new media company based out of the silicon valley. We work with you to create a digital media solution that is fast, beautiful, and tailored to your every need. With a focus on incredible, modern design, V38 will help small businesses, companies, and individuals grow with a well-designed and meticulously planned online presence. 
+Source for Vital38 public website. Feel free to open issues with any bugs you may come across.
 <br>
 <br>
 Web design, graphic design, cinematography, and photography come together in one seamless service, or compartmentalized services to meet any specific need. 
