@@ -1,0 +1,9 @@
+deploy:
+  provider: s3
+  access_key_id: AKIAJVV2FCGB6KNM4KYQ
+  secret_access_key:
+    secure: RI6lXcZlC8kIuJHZBbd1MtHvyeI2HGSVVnD6L9YKZhXpNAL6GshsGrFx+k4eZTZ1FgzP9lanSoylql+OlpObwoj9JiHqVUxeN41hzP0NWWeVrutbvHhAPzHSAvKlFxEZ21WFufVXCEG/FPdx7w3rkg5yPEeG+OV/Tm4s0Vq8dhvuE1dMS/TEoGfaeqCLKDYsBp97VnRwxpZCanv1584QGQMbeAcu/PAuyUEItxb9wKiGd96bMkS0B0TGollzIgZE7/EU2lOnNASTW/z+Lagpk3ir3hndfhp/+amHzS5urt4Jm/trn5HfBdU52qOwPTzgLPvzhnQOFRrtiFD4V83Q8ditNrTR4O4dJ14Pd6+odht3OVTSZfcVqJwXA/PWumONdaibyVoJ6gpWvkdyb3DnmhQLKSIQUXlHet8Do6VeGBQaHBSK3L3P0AMD/OGADXaYsBzF02T5n0ymx3Y1cc7gnFEXm0AReAeOhG/t3Tuzy4nGeHn0EQ3bO/9A39o0ElYDog4Rb2esp4Ud0ugISr4psMx2T73jBd71OZ/AmWk2VrfWeTP6HHKOaiIOhKfR/E0zS0dLkxmJRihcr7rvV3VyrqWHkPPT+qXIICuBlZ7Ub19YS4c7khjM85ZosV/dmpVCUaHd+n0EyIQ0MxkSLhSutB46N+ndWjX0XH7hkxVxUKY=
+  bucket: vital38.com
+  acl: public_read
+  on:
+    repo: Vital38Media/vital38media.github.io
