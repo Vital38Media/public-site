@@ -4,7 +4,7 @@ node_js:
 before_script:
   - npm install -g grunt
 before_deploy:
-  - rm -r node_modules package.json Gruntfile.js README.md
+  - rm -r node_modules package.json Gruntfile.js README.md package-lock.json
 script: grunt
 deploy:
   provider: s3
