@@ -5,16 +5,15 @@ div.shell div {
 
 div.shell {
     width: 90% !important;
-    min-height: 200px !important;
+    min-height: 240px !important;
 }
 
 div.shell .typed-cursor {
     font-size: 0.9em !important;
 }
 
-a.nav {
-    font-size: 1em !important;
-    padding-left: 10px !important;
+div.nav {
+    display: none !important; 
 }
 
 div.moduleText {
@@ -36,10 +35,44 @@ body {
   color: black;
 }
 
+#loadingCover {
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    z-index: 99999999;
+}
+
+div.loader {
+    margin: 0 auto;
+    display: flex;
+}
+
+@keyframes V38Loader {
+    0% { 
+        opacity: 1; 
+    }
+    50% { 
+        opacity: 0.5; 
+        transform: scale(.9)
+    }
+	100% { 
+        opacity: 1; 
+    }
+}
+
+img.pulse {
+    animation: V38Loader 3s infinite;
+}
+
 div.header {
     padding-top: 20px;
     padding-right: 20px;
     padding-left: 20px;
+    padding-bottom: 10px;
     float: left;
     width: 100%;
     position: fixed;
@@ -56,6 +89,16 @@ div.main {
     padding-left: 20px;
     padding-top: 150px;
     min-height: 100vh;
+}
+
+div.shell div.typedText {
+    padding-left: 10px;
+    display: block;
+}
+
+span.bodyTag {
+    padding-left: 50px;
+    display: block;
 }
 
 div.homePageModules {

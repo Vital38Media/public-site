@@ -19,6 +19,7 @@
   "smarttabs": true,
   "globals": {
     "$": false,
-    "Typed": false
+    "Typed": false,
+    "v38State": false
   }
 }
