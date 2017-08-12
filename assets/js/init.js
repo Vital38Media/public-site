@@ -2,6 +2,7 @@ $(document).ready(function() {
     $('.servicesContent').hide();
     $('#typed-strings').hide();
     $('.headerLogo').hide();
+    $('#mobileMenu').hide();
     for (var property in v38State.displays) {
         v38State.displays[property] = true;
     }

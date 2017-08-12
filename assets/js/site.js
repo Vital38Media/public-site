@@ -68,9 +68,18 @@ $(window).scroll(function(){
 });
 
 function scrollToHandler(destinationClass) {
+    removeMobileMenu();
     if (!destinationClass) {
          window.scrollTo(0, 0);
     } else {
         window.scrollTo(0, $('.' + destinationClass).position().top - 101);
     }
+}
+
+function removeMobileMenu() {
+    $('#mobileMenu').fadeOut();
+}
+
+function showMobileMenu() {
+    $('#mobileMenu').fadeIn();
 }

@@ -28,6 +28,15 @@ mixpanel.init("b2e7936bd79adaee36240f7157e98082");</script><!-- end Mixpanel -->
 
 </head>
 <body>
+    <div id="mobileMenu">
+        <p class="mobileItemWrapper">
+                <a class="homec nav" onclick="scrollToHandler(false)"> Home </a>
+                <a class="aboutc nav" onclick="scrollToHandler('about')"> About </a>
+                <a class="portfolio nav" onclick="scrollToHandler('services')"> Services </a>
+                <a class="contactc nav" onclick="scrollToHandler('contact')"> Contact </a>
+
+        </p>
+    </div>
     <div id="typed-strings">
         <p>
             <br>
@@ -59,6 +68,9 @@ mixpanel.init("b2e7936bd79adaee36240f7157e98082");</script><!-- end Mixpanel -->
 
             </p>
         </div>
+        <p class="openMobileMenu">
+                <i class="fa fa-bars" aria-hidden="false" onclick="showMobileMenu()" ></i>
+        </p>
     </div>
     <div class="main">
         <div class="shell">
